@@ -28,10 +28,6 @@ p{
   font-family: var(--font-poppins);
 }
 
-body {
-  overflow: hidden;
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
