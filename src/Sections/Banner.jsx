@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
 const bannerItems = [
   {
     highlight: "10y+",
@@ -11,18 +14,24 @@ const bannerItems = [
     highlight: "180+",
     description: "Completed Projects",
   },
+  {
+    highlight: <FontAwesomeIcon icon={faCircleCheck} className="text-2xl" />,
+    description: "Front End Certified",
+  },
 ];
 
 const Banner = () => {
   return (
-    <section className="flex w-full items-center justify-evenly gap-10">
+    <section className="mx-auto grid w-full grid-cols-4 items-center gap-2 max-lg:gap-y-6 max-md:grid-cols-2">
       {bannerItems.map((item, index) => (
-        <h6 key={index} className="flex items-center gap-2 text-sm text-white">
-          <span className="text-accent text-xl font-[800] tracking-wider">
+        <div key={index} className="flex flex-col gap-2">
+          <h6 className="text-accent text-center text-xl font-[800] tracking-wider">
             {item.highlight}
-          </span>{" "}
-          {item.description}
-        </h6>
+          </h6>
+          <p className="text-center text-[15px] text-gray-400 max-sm:text-sm">
+            {item.description}
+          </p>
+        </div>
       ))}
     </section>
   );

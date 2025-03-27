@@ -5,6 +5,9 @@ import TypewriterEffect from "./Components/TypewriterEffect.jsx";
 import Hero from "./Sections/Hero.jsx";
 import Banner from "./Sections/Banner.jsx";
 import BodyMain from "./Components/BodyMain.jsx";
+import Education from "./Sections/Education.jsx";
+import TimelineCard from "./Components/TimelineCard.jsx";
+import Navbar from "./Components/Navbar.jsx";
 
 export {
   InfoMenu,
@@ -14,4 +17,7 @@ export {
   Hero,
   Banner,
   BodyMain,
+  Education,
+  TimelineCard,
+  Navbar,
 };

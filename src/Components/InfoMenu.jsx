@@ -2,10 +2,12 @@ import { CircleProgressBar, LinearProgressBar } from "../index.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const InfoMenu = () => {
+const InfoMenu = ({ menuOpen }) => {
   return (
-    <div className="bg-navy-700 grid h-full w-full grid-rows-[250px_auto_60px] shadow-md">
-      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] shadow-sm">
+    <div
+      className={`bg-navy-700 top-0 z-30 grid h-screen w-[300px] flex-none grid-rows-[auto_auto_60px] shadow-md max-lg:fixed ${menuOpen ? "right-0" : "right-[-300px]"} transition-all duration-500 ease-in-out`}
+    >
+      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] py-6 shadow-sm max-lg:pt-[84px]">
         <div className="mb-6 size-24 rounded-full bg-gray-400"></div>
         <h3 className="text-md mb-2 font-semibold text-white">
           Micheil Fourie
@@ -14,7 +16,7 @@ const InfoMenu = () => {
         <p className="text-sm text-gray-400">Creative Designer</p>
       </div>
 
-      <div className="scrollbar-hidden divide-navy-500 flex h-[calc(100vh-250px-60px-32px)] flex-col gap-4 divide-y overflow-y-scroll p-6 text-sm">
+      <div className="scrollbar-hidden divide-navy-500 flex h-[calc(100vh-250px-60px)] flex-col gap-4 divide-y overflow-y-scroll p-6 text-sm max-lg:h-[calc(100vh-250px-84px-32px)]">
         <div className="flex flex-col pb-4">
           <div className="flex justify-between">
             <p className="mb-2 text-white">Residence:</p>
@@ -43,17 +45,17 @@ const InfoMenu = () => {
       </div>
 
       <div className="flex items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] shadow-sm">
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/micheil-fourie/" target="_blank">
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="p-4 text-2xl text-white"
+            className="p-4 text-2xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[ffffff]"
           />
         </a>
 
-        <a href="" target="_blank">
+        <a href="https://github.com/micheilfourie/" target="_blank">
           <FontAwesomeIcon
             icon={faGithub}
-            className="p-4 text-2xl text-white"
+            className="p-4 text-2xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[#ffffff]"
           />
         </a>
       </div>
