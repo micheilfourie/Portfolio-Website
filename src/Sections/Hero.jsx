@@ -4,7 +4,7 @@ import { TypewriterEffect } from "../index.js";
 
 const Hero = () => {
   return (
-    <header className="relative flex w-full flex-col justify-center gap-4 bg-gray-400/10 p-10 shadow-md max-lg:mt-[60px] max-sm:p-5">
+    <header className="relative flex w-full flex-col justify-center gap-4 bg-gradient-to-tr from-white/5 to-[#ffffff]/10 p-10 shadow-md max-lg:mt-[60px] max-sm:p-5">
       <div className="absolute top-0 left-0 h-full w-full backdrop-blur-xs"></div>
 
       <h1 className="z-10 max-w-[500px] text-4xl font-[800] tracking-wide text-white uppercase max-sm:text-3xl">

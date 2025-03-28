@@ -6,6 +6,7 @@ const CircleProgressBar = ({
   radius = 50,
   strokeWidth = 8,
   title = "",
+  delay = 0,
 }) => {
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (progress / 100) * circumference;
@@ -16,10 +17,11 @@ const CircleProgressBar = ({
       duration: 1.5,
       ease: "easeInOut",
       onUpdate: (value) => setDisplayProgress(Math.round(value)),
+      delay,
     });
 
     return () => controls.stop();
-  }, [progress]);
+  }, [progress, delay]);
 
   return (
     <div className="flex flex-col items-center gap-2">
@@ -51,7 +53,7 @@ const CircleProgressBar = ({
             strokeDashoffset={offset}
             initial={{ strokeDashoffset: circumference }}
             animate={{ strokeDashoffset: offset }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 1.5, ease: "easeInOut", delay }}
           />
         </svg>
 

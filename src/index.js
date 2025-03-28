@@ -8,6 +8,8 @@ import BodyMain from "./Components/BodyMain.jsx";
 import Education from "./Sections/Education.jsx";
 import TimelineCard from "./Components/TimelineCard.jsx";
 import Navbar from "./Components/Navbar.jsx";
+import Projects from "./Sections/Projects.jsx";
+import ProjectCard from "./Components/ProjectCard.jsx";
 
 export {
   InfoMenu,
@@ -20,4 +22,6 @@ export {
   Education,
   TimelineCard,
   Navbar,
+  Projects,
+  ProjectCard,
 };

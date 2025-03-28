@@ -1,7 +1,7 @@
 import { motion, animate } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const LinearProgressBar = ({ progress = 50, title = "" }) => {
+const LinearProgressBar = ({ progress = 50, title = "", delay = 0 }) => {
   const [displayProgress, setDisplayProgress] = useState(0);
 
   useEffect(() => {
@@ -9,10 +9,11 @@ const LinearProgressBar = ({ progress = 50, title = "" }) => {
       duration: 1.5,
       ease: "easeInOut",
       onUpdate: (value) => setDisplayProgress(Math.round(value)),
+      delay,
     });
 
     return () => controls.stop();
-  }, [progress]);
+  }, [progress, delay]);
 
   return (
     <div>
@@ -28,7 +29,7 @@ const LinearProgressBar = ({ progress = 50, title = "" }) => {
           className="bg-accent h-full"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1.5, ease: "easeInOut", delay }}
         />
       </div>
     </div>

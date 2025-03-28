@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const InfoMenu = ({ menuOpen }) => {
   return (
     <div
-      className={`bg-navy-700 top-0 z-30 grid h-screen w-[300px] flex-none grid-rows-[auto_auto_60px] shadow-md max-lg:fixed ${menuOpen ? "right-0" : "right-[-300px]"} transition-all duration-500 ease-in-out`}
+      className={`bg-navy-700 top-0 z-30 grid h-screen w-[300px] flex-none grid-rows-[auto_auto_60px] shadow-md max-lg:fixed ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
       <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] py-6 shadow-sm max-lg:pt-[84px]">
         <div className="mb-6 size-24 rounded-full bg-gray-400"></div>
@@ -30,17 +30,17 @@ const InfoMenu = ({ menuOpen }) => {
         </div>
 
         <div className="flex justify-evenly py-4 pb-8">
-          <CircleProgressBar progress={94} title="Afrikaans" />
-          <CircleProgressBar progress={86} title="English" />
+          <CircleProgressBar progress={94} title="Afrikaans" delay={0} />
+          <CircleProgressBar progress={86} title="English" delay={0.2} />
         </div>
 
         <div className="flex flex-col gap-6 py-4 pb-8">
-          <LinearProgressBar progress={78} title="HTML" />
-          <LinearProgressBar progress={76} title="CSS" />
-          <LinearProgressBar progress={80} title="JavaScript" />
-          <LinearProgressBar progress={82} title="React" />
-          <LinearProgressBar progress={72} title="Redux" />
-          <LinearProgressBar progress={85} title="Tailwind" />
+          <LinearProgressBar progress={78} title="HTML" delay={0.4} />
+          <LinearProgressBar progress={76} title="CSS" delay={0.6} />
+          <LinearProgressBar progress={80} title="JavaScript" delay={0.8} />
+          <LinearProgressBar progress={82} title="React" delay={1} />
+          <LinearProgressBar progress={72} title="Redux" delay={1.2} />
+          <LinearProgressBar progress={85} title="Tailwind" delay={1.4} />
         </div>
       </div>
 
