@@ -1,25 +1,27 @@
 import { ProjectCard } from "../index.js";
+import TravelThumbnail from "../assets/Travel Website Thumbnail.png";
+import FurnatureThumbnail from "../assets/Furnature E-Commerce Thumbnail.png";
 
 const projectList = [
   {
     title: "Furnature E-Commerce",
-    thumbnail: "https://via.placeholder.com/150",
+    thumbnail: FurnatureThumbnail,
     link: "https://micheilfourie.github.io/Furniture-Shop-Website/",
   },
   {
     title: "Travel Website",
-    thumbnail: "https://via.placeholder.com/150",
+    thumbnail: TravelThumbnail,
     link: "https://micheilfourie.github.io/Travel-Website/",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="w-full">
-      <h4 className="py-4 text-center text-xl font-bold tracking-wider text-white uppercase max-lg:text-start">
+    <section id="projects" className="flex w-full flex-col gap-4">
+      <h4 className="py-4 text-xl font-bold tracking-wider text-white uppercase">
         Projects
       </h4>
-      <div className="grid w-full grid-cols-2 gap-4">
+      <div className="grid w-full grid-cols-2 gap-4 max-sm:grid-cols-1">
         {projectList.map((item, index) => (
           <ProjectCard
             key={index}
@@ -29,7 +31,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

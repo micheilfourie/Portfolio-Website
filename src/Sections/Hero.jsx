@@ -14,13 +14,16 @@ const Hero = () => {
       <TypewriterEffect />
 
       <div className="z-10 mt-4 flex items-center">
-        <a href="">
+        <a href="#projects">
           <button className="bg-accent text-navy-500 font-montserrat h-[50px] w-[170px] cursor-pointer text-[13px] font-semibold uppercase transition-all duration-300 ease-in-out hover:-translate-y-[5px]">
             View Projects
           </button>
         </a>
 
-        <a href="" className="group z-10 flex items-center p-4 text-white">
+        <a
+          href="#contact"
+          className="group z-10 flex items-center p-4 text-white"
+        >
           <p className="group inline-block pr-2 text-[13px] font-semibold tracking-wider uppercase">
             Hire me{" "}
           </p>

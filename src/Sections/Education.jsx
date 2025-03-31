@@ -35,8 +35,8 @@ const timelineList = [
 
 const Education = () => {
   return (
-    <div className="mt-4 flex h-full w-full flex-col gap-4">
-      <h4 className="text-center text-xl font-bold tracking-wider text-white uppercase">
+    <section className="mt-4 flex h-full w-full flex-col gap-4">
+      <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Education
       </h4>
       <div className="relative flex flex-col gap-8">
@@ -54,7 +54,7 @@ const Education = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

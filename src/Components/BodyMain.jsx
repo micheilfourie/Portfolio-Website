@@ -1,4 +1,4 @@
-import { Hero, Banner, Education, Projects } from "../index.js";
+import { Hero, Banner, Education, Projects, GetInTouch } from "../index.js";
 import image from "../assets/1.jpg";
 
 const BodyMain = () => {
@@ -10,14 +10,15 @@ const BodyMain = () => {
         className="absolute top-0 right-0 h-[400px] w-full object-cover object-bottom"
       />
 
-      <div className="scrollbar-hidden relative grid h-full grid-rows-[auto_auto_auto_auto_60px] gap-8 overflow-y-scroll p-8 pb-0 max-lg:h-[100vh] max-lg:p-4 max-lg:pb-0">
+      <div className="scrollbar-hidden relative flex h-full flex-col gap-8 overflow-y-scroll p-8 pb-0 max-lg:h-[100vh] max-lg:p-4 max-lg:pb-0">
         <Hero />
         <Banner />
         <Education />
         <Projects />
+        <GetInTouch />
 
         <footer className="flex w-full items-center justify-center">
-          <p className="font-montserrat text-center text-sm text-gray-500">
+          <p className="font-montserrat p-4 text-center text-sm text-gray-500">
             &copy; 2025 Micheil Fourie
           </p>
         </footer>

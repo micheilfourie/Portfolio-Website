@@ -19,14 +19,14 @@ const TimelineCard = ({
         <span className="text-navy-500 absolute top-[-10px] right-[-15px] text-5xl">
           &#9700;
         </span>
-        <h5 className="text-md mb-4 font-semibold tracking-wider text-white uppercase">
+        <h5 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">
           {heading}
         </h5>
         <p className="mb-4 line-clamp-4 text-sm text-gray-400">{description}</p>
         <a
           href={link}
           target="_blank"
-          className="text-accent font-montserrat group group py-4 text-[15px] tracking-wider"
+          className="text-accent font-montserrat group group py-4 text-sm tracking-wider"
         >
           Certificate
           <FontAwesomeIcon

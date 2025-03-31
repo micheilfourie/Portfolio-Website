@@ -10,6 +10,7 @@ import TimelineCard from "./Components/TimelineCard.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import Projects from "./Sections/Projects.jsx";
 import ProjectCard from "./Components/ProjectCard.jsx";
+import GetInTouch from "./Sections/GetInTouch.jsx";
 
 export {
   InfoMenu,
@@ -24,4 +25,5 @@ export {
   Navbar,
   Projects,
   ProjectCard,
+  GetInTouch,
 };

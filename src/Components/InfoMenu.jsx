@@ -36,11 +36,11 @@ const InfoMenu = ({ menuOpen }) => {
 
         <div className="flex flex-col gap-6 py-4 pb-8">
           <LinearProgressBar progress={78} title="HTML" delay={0.4} />
-          <LinearProgressBar progress={76} title="CSS" delay={0.6} />
-          <LinearProgressBar progress={80} title="JavaScript" delay={0.8} />
-          <LinearProgressBar progress={82} title="React" delay={1} />
-          <LinearProgressBar progress={72} title="Redux" delay={1.2} />
-          <LinearProgressBar progress={85} title="Tailwind" delay={1.4} />
+          <LinearProgressBar progress={76} title="CSS" delay={0.5} />
+          <LinearProgressBar progress={80} title="JavaScript" delay={0.6} />
+          <LinearProgressBar progress={82} title="React" delay={0.7} />
+          <LinearProgressBar progress={72} title="Redux" delay={0.8} />
+          <LinearProgressBar progress={85} title="Tailwind" delay={0.9} />
         </div>
       </div>
 
