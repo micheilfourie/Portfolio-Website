@@ -1,18 +1,17 @@
-import { Hero, Banner, Education, Projects, GetInTouch } from "../index.js";
-import image from "../assets/1.jpg";
+import { Hero, Education, Projects, GetInTouch } from "../index.js";
+import image from "../assets/hero.webp";
 
 const BodyMain = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative h-screen overflow-hidden">
       <img
         src={image}
         alt=""
         className="absolute top-0 right-0 h-[400px] w-full object-cover object-bottom"
       />
 
-      <div className="scrollbar-hidden relative flex h-full flex-col gap-8 overflow-y-scroll p-8 pb-0 max-lg:h-[100vh] max-lg:p-4 max-lg:pb-0">
+      <div className="scrollbar-hidden relative flex h-full flex-col gap-16 overflow-y-scroll p-8 pb-0 max-lg:p-4">
         <Hero />
-        <Banner />
         <Education />
         <Projects />
         <GetInTouch />

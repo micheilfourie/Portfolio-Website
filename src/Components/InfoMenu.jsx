@@ -5,9 +5,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const InfoMenu = ({ menuOpen }) => {
   return (
     <div
-      className={`bg-navy-700 top-0 z-30 grid h-screen w-[300px] flex-none grid-rows-[auto_auto_60px] shadow-md max-lg:fixed ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
+      className={`bg-navy-700 top-[60px] z-30 grid h-screen w-[300px] flex-none grid-rows-[260px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100vh-60px)] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
-      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] py-6 shadow-sm max-lg:pt-[84px]">
+      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tr from-[#23232D] to-[#252433] py-6 shadow-sm">
         <div className="mb-6 size-24 rounded-full bg-gray-400"></div>
         <h3 className="text-md mb-2 font-semibold text-white">
           Micheil Fourie
@@ -16,7 +16,7 @@ const InfoMenu = ({ menuOpen }) => {
         <p className="text-sm text-gray-400">Creative Designer</p>
       </div>
 
-      <div className="scrollbar-hidden divide-navy-500 flex h-[calc(100vh-250px-60px)] flex-col gap-4 divide-y overflow-y-scroll p-6 text-sm max-lg:h-[calc(100vh-250px-84px-32px)]">
+      <div className="scrollbar-hidden divide-navy-500 flex flex-col gap-4 divide-y overflow-y-scroll p-6 text-sm">
         <div className="flex flex-col pb-4">
           <div className="flex justify-between">
             <p className="mb-2 text-white">Residence:</p>
@@ -44,18 +44,18 @@ const InfoMenu = ({ menuOpen }) => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center bg-gradient-to-tl from-[#23232D] to-[#252433] shadow-sm">
+      <div className="flex items-center justify-center bg-gradient-to-tr from-[#23232D] to-[#252433] shadow-sm">
         <a href="https://www.linkedin.com/in/micheil-fourie/" target="_blank">
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="p-4 text-2xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[ffffff]"
+            className="p-4 text-3xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[#ffffff]"
           />
         </a>
 
         <a href="https://github.com/micheilfourie/" target="_blank">
           <FontAwesomeIcon
             icon={faGithub}
-            className="p-4 text-2xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[#ffffff]"
+            className="p-4 text-3xl text-white transition-all duration-300 ease-in-out hover:-translate-y-[1px] hover:scale-110 hover:text-[#ffffff]"
           />
         </a>
       </div>

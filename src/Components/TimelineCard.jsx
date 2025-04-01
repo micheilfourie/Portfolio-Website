@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faAward } from "@fortawesome/free-solid-svg-icons";
 
 const TimelineCard = ({
   heading = "",
@@ -11,18 +11,21 @@ const TimelineCard = ({
 }) => {
   return (
     <div
-      className={`flex w-full translate-y-2 gap-8 ${direction === "left" ? "justify-start" : "justify-end"}`}
+      className={`flex w-full translate-y-2 gap-8 ${direction === "left" ? "justify-start" : "justify-end"} relative`}
     >
+      <span className="text-navy-500 absolute top-[-9px] right-[35px] z-10 text-3xl">
+        &#9700;
+      </span>
+
       <div
-        className={`to-navy-500 from-navy-600 relative bg-gradient-to-tr ${isFullWidth ? "w-full" : "w-[calc(50%-38px)]"} p-6 shadow-md`}
+        className={`to-navy-500 from-navy-600 relative bg-gradient-to-tr ${isFullWidth ? "w-full" : "w-[calc(50%-38px)]"} overflow-hidden p-6 shadow-md`}
       >
-        <span className="text-navy-500 absolute top-[-10px] right-[-15px] text-5xl">
-          &#9700;
-        </span>
-        <h5 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">
+        <h5 className="mb-4 font-semibold tracking-wider text-white">
           {heading}
         </h5>
-        <p className="mb-4 line-clamp-4 text-sm text-gray-400">{description}</p>
+        <p className="mb-4 line-clamp-4 text-sm tracking-wide text-gray-400 italic">
+          {description}
+        </p>
         <a
           href={link}
           target="_blank"
@@ -36,7 +39,10 @@ const TimelineCard = ({
         </a>
       </div>
 
-      <div className="bg-navy-900 border-accent z-10 size-4 -translate-y-2 rounded-full border-3 shadow-md"></div>
+      <FontAwesomeIcon
+        icon={faAward}
+        className="text-accent -translate-y-2 rotate-[-2deg] text-2xl"
+      />
     </div>
   );
 };

@@ -22,7 +22,7 @@ const bannerItems = [
 
 const Banner = () => {
   return (
-    <section className="mx-auto grid w-full grid-cols-4 items-center gap-2 max-lg:gap-y-6 max-md:grid-cols-2">
+    <section className="mx-auto mt-8 grid w-full grid-cols-4 items-center gap-2 max-lg:gap-y-6 max-md:grid-cols-2">
       {bannerItems.map((item, index) => (
         <div key={index} className="flex flex-col gap-2">
           <h6 className="text-accent text-center text-xl font-[800] tracking-wider">

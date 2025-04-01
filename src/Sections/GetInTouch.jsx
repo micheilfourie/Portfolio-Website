@@ -1,21 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faEnvelope,
-  faAt,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faAt } from "@fortawesome/free-solid-svg-icons";
 
 const GetInTouch = () => {
   return (
     <section id="contact" className="flex flex-col gap-4">
-      <h4 className="py-4 text-xl font-bold tracking-wider text-white uppercase">
+      <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Get In Touch
       </h4>
 
-      <form className="to-navy-500 from-navy-600 flex w-full flex-col gap-4 bg-gradient-to-tr p-8 text-white placeholder:text-gray-400">
+      <form className="to-navy-500 from-navy-600 flex w-full flex-col gap-4 bg-gradient-to-tr p-8 text-white shadow-md placeholder:text-gray-400">
         <div className="group flex">
-          <div className="bg-navy-800 group-focus-within:bg-accent group-focus-within:text-navy-500 flex items-center justify-center p-4 transition-colors duration-500 ease-in-out">
+          <div className="bg-navy-800 group-focus-within:text-navy-500 flex items-center justify-center p-4 transition-colors duration-500 ease-in-out group-focus-within:bg-white">
             <FontAwesomeIcon icon={faUser} className="text-md" />
           </div>
           <input
@@ -26,7 +21,7 @@ const GetInTouch = () => {
         </div>
 
         <div className="group flex">
-          <div className="bg-navy-800 group-focus-within:bg-accent group-focus-within:text-navy-500 flex items-center justify-center p-4 transition-colors duration-500 ease-in-out">
+          <div className="bg-navy-800 group-focus-within:text-navy-500 flex items-center justify-center p-4 transition-colors duration-500 ease-in-out group-focus-within:bg-white">
             <FontAwesomeIcon icon={faAt} className="text-md" />
           </div>
           <input
@@ -37,7 +32,7 @@ const GetInTouch = () => {
         </div>
 
         <div className="group flex">
-          <div className="bg-navy-800 group-focus-within:bg-accent group-focus-within:text-navy-500 flex items-start justify-center p-4 transition-colors duration-500 ease-in-out">
+          <div className="bg-navy-800 group-focus-within:text-navy-500 flex items-start justify-center p-4 transition-colors duration-500 ease-in-out group-focus-within:bg-white">
             <FontAwesomeIcon icon={faEnvelope} className="text-md pt-1" />
           </div>
           <textarea
@@ -50,18 +45,6 @@ const GetInTouch = () => {
           Send Message
         </button>
       </form>
-
-      <div className="to-navy-500 from-navy-600 flex w-full flex-col justify-center gap-2 bg-gradient-to-tr p-8 text-white placeholder:text-gray-400">
-        <div className="flex items-center gap-4">
-          <FontAwesomeIcon icon={faEnvelope} className="text-md" />
-          <p className="text-sm">fouriemicheil1@gmail.com</p>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <FontAwesomeIcon icon={faPhone} className="text-md" />
-          <p className="text-sm">072 397 9297</p>
-        </div>
-      </div>
     </section>
   );
 };

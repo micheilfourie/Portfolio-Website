@@ -35,13 +35,13 @@ const timelineList = [
 
 const Education = () => {
   return (
-    <section className="mt-4 flex h-full w-full flex-col gap-4">
+    <section className="flex w-full flex-col gap-4">
       <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Education
       </h4>
       <div className="relative flex flex-col gap-8">
         <div
-          className={`bg-navy-900 absolute top-0 right-0 h-full w-[4px] -translate-x-[5px] translate-y-2`}
+          className={`bg-navy-900 absolute top-0 right-0 h-full w-[5px] -translate-x-[7px] translate-y-2 rounded-full`}
         ></div>
 
         {timelineList.map((item, index) => (
@@ -54,6 +54,7 @@ const Education = () => {
           />
         ))}
       </div>
+      <div className="to-navy-500 from-navy-600 mt-6 h-[200px] bg-gradient-to-tr shadow-md"></div>
     </section>
   );
 };
