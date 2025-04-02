@@ -9,7 +9,7 @@ const list = [
 const TypewriterEffect = () => {
   return (
     <div className="font-poppins z-10 flex items-center gap-2 text-lg text-white max-sm:flex-col max-sm:items-start">
-      <span className="text-accent">{`<code>`}</span>
+      <span className="text-accent">{`<span>`}</span>
       <span className="max-sm:pl-8">
         <Typewriter
           options={{
@@ -23,7 +23,7 @@ const TypewriterEffect = () => {
         />
       </span>
 
-      <span className="text-accent">{`</code>`}</span>
+      <span className="text-accent">{`</span>`}</span>
     </div>
   );
 };

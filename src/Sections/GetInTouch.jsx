@@ -8,7 +8,7 @@ const GetInTouch = () => {
         Get In Touch
       </h4>
 
-      <form className="to-navy-500 from-navy-600 flex w-full flex-col gap-4 bg-gradient-to-tr p-8 text-white shadow-md placeholder:text-gray-400">
+      <form className="to-navy-500 from-navy-600 flex w-full flex-col gap-4 bg-gradient-to-tr text-white shadow-md placeholder:text-gray-400 max-sm:p-6 min-sm:p-8">
         <div className="group flex">
           <div className="bg-navy-800 group-focus-within:text-navy-500 flex items-center justify-center p-4 transition-colors duration-500 ease-in-out group-focus-within:bg-white">
             <FontAwesomeIcon icon={faUser} className="text-md" />
@@ -37,7 +37,7 @@ const GetInTouch = () => {
           </div>
           <textarea
             placeholder="Message"
-            className="bg-navy-700 h-[150px] w-full resize-none p-4 text-sm outline-0"
+            className="bg-navy-700 h-[200px] w-full resize-none p-4 text-sm outline-0"
           />
         </div>
 

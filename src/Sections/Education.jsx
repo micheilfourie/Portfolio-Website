@@ -2,22 +2,10 @@ import TimelineCard from "../Components/TimelineCard";
 
 const timelineList = [
   {
-    heading: "Responsive Web Design",
+    heading: "Relational Database",
     description:
-      "I Mastered HTML, CSS, and modern layout techniques to build fully responsive and accessible websites.",
-    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/responsive-web-design",
-  },
-  {
-    heading: "JavaScript Algorithms and Data Structures",
-    description:
-      "I Developed a strong foundation in JavaScript, learning algorithms, data structures, and problem-solving techniques to write efficient code.",
-    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/javascript-algorithms-and-data-structures-v8",
-  },
-  {
-    heading: "Front End Development Libraries",
-    description:
-      "I Gained hands-on experience with React, Redux, Bootstrap, and other essential libraries for building interactive and dynamic web applications.",
-    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/front-end-development-libraries",
+      "I Acquired expertise in relational database design, SQL queries, and data management, enhancing my backend development skills.",
+    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/relational-database-v8",
   },
   {
     heading: "Data Visualization",
@@ -26,10 +14,34 @@ const timelineList = [
     link: "https://www.freecodecamp.org/certification/Micheil_Fourie/data-visualization",
   },
   {
-    heading: "Relational Database",
+    heading: "Front End Development Libraries",
     description:
-      "I Acquired expertise in relational database design, SQL queries, and data management, enhancing my backend development skills.",
-    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/relational-database-v8",
+      "I Gained hands-on experience with React, Redux, Bootstrap, and other essential libraries for building interactive and dynamic web applications.",
+    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/front-end-development-libraries",
+  },
+  {
+    heading: "JavaScript Algorithms and Data Structures",
+    description:
+      "I Developed a strong foundation in JavaScript, learning algorithms, data structures, and problem-solving techniques to write efficient code.",
+    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/javascript-algorithms-and-data-structures-v8",
+  },
+  {
+    heading: "Responsive Web Design",
+    description:
+      "I Mastered HTML, CSS, and modern layout techniques to build fully responsive and accessible websites.",
+    link: "https://www.freecodecamp.org/certification/Micheil_Fourie/responsive-web-design",
+  },
+  {
+    heading: "3D Design",
+    description:
+      "In this course, I explored the fundamentals of 3D modeling, texturing, and rendering, creating visually compelling designs.",
+    link: "",
+  },
+  {
+    heading: "Graphic Design",
+    description:
+      "In this course, I honed my skills in Photoshop, Illustrator, and InDesign, creating impactful visuals for clients.",
+    link: "",
   },
 ];
 
@@ -54,7 +66,6 @@ const Education = () => {
           />
         ))}
       </div>
-      <div className="to-navy-500 from-navy-600 mt-6 h-[200px] bg-gradient-to-tr shadow-md"></div>
     </section>
   );
 };

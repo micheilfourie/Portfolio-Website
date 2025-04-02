@@ -15,7 +15,7 @@ const Hero = () => {
         <TypewriterEffect />
 
         <p className="z-10 max-w-[500px] text-sm tracking-wide text-gray-400 italic">
-          I'm a certified front-end developer with a decade of coding
+          I'm a certified Front-End developer with a decade of coding
           experience, along with several years in the graphic design industry.
         </p>
 

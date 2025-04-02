@@ -16,7 +16,7 @@ const bannerItems = [
   },
   {
     highlight: <FontAwesomeIcon icon={faCircleCheck} className="text-2xl" />,
-    description: "Front End Certified",
+    description: "Front-End Certified",
   },
 ];
 
