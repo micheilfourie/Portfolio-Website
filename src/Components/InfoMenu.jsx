@@ -6,6 +6,7 @@ import {
   faFreeCodeCamp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import profileImage from "../assets/profile image.png";
 
 const InfoMenu = ({ menuOpen }) => {
   return (
@@ -13,7 +14,15 @@ const InfoMenu = ({ menuOpen }) => {
       className={`bg-navy-700 top-[60px] z-30 grid h-screen w-[300px] flex-none grid-rows-[260px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100vh-60px)] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
       <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tr from-[#23232D] to-[#252433] py-6 shadow-sm">
-        <div className="mb-6 size-24 rounded-full bg-gray-400"></div>
+        <div className="mb-6 hidden size-24 rounded-full bg-gray-400"></div>
+        <div className="border-accent p2 mb-6 size-22 overflow-hidden rounded-full border-2">
+          <img
+            src={profileImage}
+            alt="profile image"
+            className="object-contain object-center"
+          />
+        </div>
+
         <h3 className="text-md mb-2 font-semibold text-white">
           Micheil Fourie
         </h3>
@@ -50,10 +59,10 @@ const InfoMenu = ({ menuOpen }) => {
 
         <ul className="font-montserrat mt-4 flex flex-col gap-2">
           {["Git", "Sass", "Jquery", "Bootstrap"].map((item, index) => (
-            <li key={index} className="font-montserrat text-white">
+            <li key={index} className="font-poppins text-white">
               <FontAwesomeIcon
                 icon={faCheck}
-                className="text-accent mr-3 text-lg"
+                className="text-accent text-md mr-3"
               />
               {item}
             </li>

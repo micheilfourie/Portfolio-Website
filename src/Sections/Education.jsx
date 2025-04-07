@@ -53,7 +53,7 @@ const Education = () => {
       </h4>
       <div className="relative flex flex-col gap-8">
         <div
-          className={`bg-navy-900 absolute top-0 right-0 h-full w-[5px] -translate-x-[7px] translate-y-2 rounded-full`}
+          className={`bg-navy-900 absolute top-0 right-0 h-full w-[3px] -translate-x-[7px] translate-y-2 rounded-full`}
         ></div>
 
         {timelineList.map((item, index) => (

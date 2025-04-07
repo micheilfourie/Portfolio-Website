@@ -2,22 +2,22 @@ import Typewriter from "typewriter-effect";
 
 const list = [
   "I Build Responsive Websites.",
-  "I Design Web Applications.",
-  "I Produce Digital Art.",
+  "I Edit and Retouch Photos.",
+  "I Create Vector Graphics.",
 ];
 
 const TypewriterEffect = () => {
   return (
-    <div className="font-poppins z-10 flex items-center gap-2 text-lg text-white max-sm:flex-col max-sm:items-start">
+    <div className="font-poppins text-md z-10 flex items-start text-white max-md:hidden max-sm:flex-col max-sm:gap-1">
       <span className="text-accent">{`<span>`}</span>
-      <span className="max-sm:pl-8">
+      <span className="px-2 max-sm:pl-4">
         <Typewriter
           options={{
             strings: list,
             autoStart: true,
             loop: true,
             deleteSpeed: 25,
-            delay: 100,
+            delay: 80,
             pauseFor: 2000,
           }}
         />

@@ -11,6 +11,7 @@ import Navbar from "./Components/Navbar.jsx";
 import Projects from "./Sections/Projects.jsx";
 import ProjectCard from "./Components/ProjectCard.jsx";
 import GetInTouch from "./Sections/GetInTouch.jsx";
+import Services from "./Sections/Services.jsx";
 
 export {
   InfoMenu,
@@ -26,4 +27,5 @@ export {
   Projects,
   ProjectCard,
   GetInTouch,
+  Services,
 };

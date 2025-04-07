@@ -24,7 +24,7 @@ const LinearProgressBar = ({ progress = 50, title = "", delay = 0 }) => {
         </motion.span>
       </label>
 
-      <div className="bg-navy-900 h-1 w-full">
+      <div className="bg-navy-900 h-[3px] w-full">
         <motion.div
           className="bg-accent h-full"
           initial={{ width: 0 }}

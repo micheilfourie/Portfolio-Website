@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const CircleProgressBar = ({
   progress = 50,
   radius = 50,
-  strokeWidth = 8,
+  strokeWidth = 6,
   title = "",
   delay = 0,
 }) => {
