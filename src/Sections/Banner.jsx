@@ -7,7 +7,7 @@ const bannerItems = [
     description: "Coding Experience",
   },
   {
-    highlight: "4y+",
+    highlight: "3y+",
     description: "Design Experience",
   },
   {

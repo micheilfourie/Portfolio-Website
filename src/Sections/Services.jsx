@@ -31,7 +31,7 @@ const Services = ({ handleScroll, contactRef }) => {
       <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Services
       </h4>
-      <div className="grid w-full grid-cols-3 gap-4 max-sm:grid-cols-1">
+      <div className="grid w-full grid-cols-3 gap-4 max-md:grid-cols-1">
         {servicesList.map((item, index) => (
           <div
             key={index}

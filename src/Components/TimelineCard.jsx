@@ -30,7 +30,7 @@ const TimelineCard = ({
         </p>
         <a
           href={link}
-          className="text-accent font-montserrat group group py-4 text-sm tracking-wider"
+          className={`text-accent font-montserrat group group py-4 text-sm tracking-wider ${link === "" ? "hidden" : "block"}`}
         >
           Certificate
           <FontAwesomeIcon

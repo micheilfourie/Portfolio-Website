@@ -25,7 +25,7 @@ const Projects = forwardRef((props, ref) => {
         <h4 className="text-xl font-bold tracking-wider text-white uppercase">
           Websites
         </h4>
-        <div className="grid w-full grid-cols-2 gap-4 max-sm:grid-cols-1">
+        <div className="grid w-full grid-cols-2 gap-4 max-md:grid-cols-1">
           {projectList.map((item, index) => (
             <ProjectCard
               key={index}

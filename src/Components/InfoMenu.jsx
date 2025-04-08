@@ -6,7 +6,7 @@ import {
   faFreeCodeCamp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import profileImage from "../assets/profile image.png";
+import profileImage from "../assets/profile image.webp";
 
 const InfoMenu = ({ menuOpen }) => {
   return (

@@ -34,13 +34,13 @@ const timelineList = [
   {
     heading: "3D Design",
     description:
-      "In this course, I explored the fundamentals of 3D modeling, texturing, and rendering, creating visually compelling designs.",
+      "I explored the fundamentals of 3D modeling, texturing, and rendering, creating visually compelling designs.",
     link: "",
   },
   {
     heading: "Graphic Design",
     description:
-      "In this course, I honed my skills in Photoshop, Illustrator, and InDesign, creating impactful visuals for clients.",
+      "I honed my skills in Photoshop, Illustrator, and InDesign, to create impactful visuals for clients.",
     link: "",
   },
 ];
@@ -51,7 +51,7 @@ const Education = () => {
       <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Education
       </h4>
-      <div className="relative flex flex-col gap-8">
+      <div className="relative flex flex-col gap-4">
         <div
           className={`bg-navy-900 absolute top-0 right-0 h-full w-[3px] -translate-x-[7px] translate-y-2 rounded-full`}
         ></div>

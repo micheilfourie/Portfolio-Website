@@ -4,7 +4,6 @@ import LinearProgressBar from "./Components/LinearProgressBar.jsx";
 import TypewriterEffect from "./Components/TypewriterEffect.jsx";
 import Hero from "./Sections/Hero.jsx";
 import Banner from "./Sections/Banner.jsx";
-import BodyMain from "./Components/BodyMain.jsx";
 import Education from "./Sections/Education.jsx";
 import TimelineCard from "./Components/TimelineCard.jsx";
 import Navbar from "./Components/Navbar.jsx";
@@ -12,6 +11,7 @@ import Projects from "./Sections/Projects.jsx";
 import ProjectCard from "./Components/ProjectCard.jsx";
 import GetInTouch from "./Sections/GetInTouch.jsx";
 import Services from "./Sections/Services.jsx";
+import Footer from "./Sections/Footer.jsx";
 
 export {
   InfoMenu,
@@ -20,7 +20,6 @@ export {
   TypewriterEffect,
   Hero,
   Banner,
-  BodyMain,
   Education,
   TimelineCard,
   Navbar,
@@ -28,4 +27,5 @@ export {
   ProjectCard,
   GetInTouch,
   Services,
+  Footer,
 };
