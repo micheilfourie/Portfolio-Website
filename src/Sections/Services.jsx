@@ -59,7 +59,8 @@ const Services = ({ handleScroll, contactRef }) => {
             <div className="absolute right-[-40px] -bottom-[40px] size-[150px]">
               <img
                 src={item.image}
-                alt={`${item.title} image`}
+                alt="backdrop image"
+                loading="lazy"
                 className="opacity-1"
               />
             </div>

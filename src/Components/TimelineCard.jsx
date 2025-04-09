@@ -6,10 +6,10 @@ import starSVG from "../assets/Star_Negative.svg";
 const TimelineCard = ({
   heading = "",
   description = "",
-  link = "",
   direction = "left",
   isFullWidth = false,
-  image = starSVG,
+  handleViewerToggle,
+  Certificate,
 }) => {
   return (
     <div
@@ -28,18 +28,23 @@ const TimelineCard = ({
         <p className="mb-4 line-clamp-4 max-w-[600px] text-[14px] tracking-wide text-gray-400">
           {description}
         </p>
-        <a
-          href={link}
-          className={`text-accent font-montserrat group group py-4 text-sm tracking-wider ${link === "" ? "hidden" : "block"}`}
+        <button
+          onClick={() => handleViewerToggle(Certificate)}
+          className={`text-accent font-montserrat group group cursor-pointer py-4 text-sm tracking-wider ${Certificate === "" ? "hidden" : "block"}`}
         >
           Certificate
           <FontAwesomeIcon
             icon={faChevronRight}
             className="ml-2 text-xs transition-all duration-300 ease-in-out group-hover:translate-x-1"
           />
-        </a>
+        </button>
         <div className="absolute right-[-40px] -bottom-[40px] size-[150px]">
-          <img src={image} alt="" className="rotate-12 opacity-1" />
+          <img
+            src={starSVG}
+            loading="lazy"
+            alt="backdrop image"
+            className="rotate-12 opacity-1"
+          />
         </div>
       </div>
       <div className="relative">

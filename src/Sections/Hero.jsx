@@ -9,7 +9,8 @@ const Hero = ({ handleScroll, projectRef, contactRef }) => {
       <div className="to-navy-500 from-navy-600 relative flex w-full flex-col justify-center gap-6 bg-gradient-to-tr p-8 shadow-md max-lg:mt-[60px] max-sm:p-5 min-md:from-white/5 min-md:to-[#ffffff]/10">
         <img
           src={heroPhoto}
-          alt=""
+          alt="Hero Image"
+          loading="lazy"
           className="absolute right-0 -bottom-15 z-10 h-[430px] object-contain object-left max-md:hidden"
         />
 

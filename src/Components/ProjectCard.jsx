@@ -13,6 +13,7 @@ const ProjectCard = ({
         <img
           src={thumbnail}
           alt={`${title} thumbnail`}
+          loading="lazy"
           className="h-full w-full object-cover object-top brightness-80 transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-100"
         />
       </a>

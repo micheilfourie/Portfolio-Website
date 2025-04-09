@@ -3,9 +3,9 @@ import Logo from "../assets/Logo_Offwhite.svg";
 const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
   return (
     <>
-      <nav className="fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr from-[#23232D] to-[#252433] px-6 shadow-sm min-lg:hidden">
+      <nav className="fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr from-[#23232D] to-[#252433] px-6 shadow-md min-lg:hidden">
         <button onClick={() => handleScroll()} className="cursor-pointer">
-          <img src={Logo} alt="" className="h-[35px]" />
+          <img src={Logo} alt="Logo" loading="lazy" className="h-[35px]" />
         </button>
 
         <button onClick={handleMenuToggle} className="relative cursor-pointer">
@@ -49,7 +49,7 @@ const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
       </nav>
       <div
         onClick={handleMenuToggle}
-        className={`bg-navy-700 fixed top-0 left-0 z-20 flex h-screen w-screen max-w-screen-xl cursor-pointer justify-end opacity-50 shadow-sm min-lg:hidden ${!menuOpen && "hidden"}`}
+        className={`bg-navy-900/90 fixed top-0 left-0 z-20 flex h-screen w-screen cursor-pointer min-lg:hidden ${!menuOpen && "pointer-events-none cursor-default opacity-0"} transitions-all duration-300 ease-in-out`}
       ></div>
     </>
   );

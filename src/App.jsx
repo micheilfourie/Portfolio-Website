@@ -7,6 +7,7 @@ import {
   GetInTouch,
   Services,
   Footer,
+  ImageViewer,
 } from "./index.js";
 import { useState, useRef } from "react";
 
@@ -14,11 +15,18 @@ import image from "./assets/hero.webp";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [imageViewerOpen, setImageViewerOpen] = useState(false);
+  const [imageToView, setImageToView] = useState(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const topRef = useRef(null);
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
+
+  const handleViewerToggle = (cert) => {
+    setImageViewerOpen(!imageViewerOpen);
+    setImageToView(cert);
+  };
 
   const handleScroll = (ref = null) => {
     if (ref && ref.current) {
@@ -43,12 +51,20 @@ function App() {
           handleScroll={handleScroll}
           topRef={topRef}
         />
+
+        <ImageViewer
+          imageViewerOpen={imageViewerOpen}
+          handleViewerToggle={handleViewerToggle}
+          imageToView={imageToView}
+        />
+
         <InfoMenu menuOpen={menuOpen} />
 
         <div className="relative h-screen overflow-hidden">
           <img
             src={image}
-            alt=""
+            alt="fixed background image"
+            loading="lazy"
             className="absolute top-0 right-0 h-[400px] w-full object-cover object-bottom max-md:hidden"
           />
 
@@ -63,7 +79,7 @@ function App() {
             />
             <Services handleScroll={handleScroll} contactRef={contactRef} />
             <Projects ref={projectRef} />
-            <Education />
+            <Education handleViewerToggle={handleViewerToggle} />
             <GetInTouch ref={contactRef} />
             <Footer />
           </div>
