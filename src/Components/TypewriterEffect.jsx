@@ -1,10 +1,5 @@
 import Typewriter from "typewriter-effect";
-
-const list = [
-  "I Build Responsive Websites.",
-  "I Edit and Retouch Photos.",
-  "I Create Vector Graphics.",
-];
+import { typeWriterList } from "../data.js";
 
 const TypewriterEffect = () => {
   return (
@@ -13,7 +8,7 @@ const TypewriterEffect = () => {
       <span className="px-2 max-sm:pl-4">
         <Typewriter
           options={{
-            strings: list,
+            strings: typeWriterList,
             autoStart: true,
             loop: true,
             deleteSpeed: 25,

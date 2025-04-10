@@ -4,12 +4,11 @@ import { faChevronRight, faAward } from "@fortawesome/free-solid-svg-icons";
 import starSVG from "../assets/Star_Negative.svg";
 
 const TimelineCard = ({
+  index = index,
   heading = "",
   description = "",
   direction = "left",
-  isFullWidth = false,
   handleViewerToggle,
-  Certificate,
 }) => {
   return (
     <div
@@ -20,17 +19,17 @@ const TimelineCard = ({
       </span>
 
       <div
-        className={`to-navy-500 from-navy-600 relative bg-gradient-to-tr ${isFullWidth ? "w-full" : "w-[calc(50%-38px)]"} overflow-hidden p-6 shadow-md`}
+        className={`to-navy-500 from-navy-600 relative flex w-full flex-col gap-4 overflow-hidden bg-gradient-to-tr p-6 shadow-md`}
       >
-        <h5 className="mb-4 font-semibold tracking-wide text-white uppercase">
+        <h5 className="font-semibold tracking-wide text-white uppercase">
           {heading}
         </h5>
-        <p className="mb-4 line-clamp-4 max-w-[600px] text-[14px] tracking-wide text-gray-400">
+        <p className="line-clamp-4 max-w-[600px] text-[14px] tracking-wide text-gray-400">
           {description}
         </p>
         <button
-          onClick={() => handleViewerToggle(Certificate)}
-          className={`text-accent font-montserrat group group cursor-pointer py-4 text-sm tracking-wider ${Certificate === "" ? "hidden" : "block"}`}
+          onClick={() => handleViewerToggle(index)}
+          className={`text-accent font-montserrat group group cursor-pointer py-1 text-start text-sm tracking-wider`}
         >
           Certificate
           <FontAwesomeIcon

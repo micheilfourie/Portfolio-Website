@@ -16,16 +16,20 @@ import image from "./assets/hero.webp";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [imageViewerOpen, setImageViewerOpen] = useState(false);
-  const [imageToView, setImageToView] = useState(null);
+  const [imageIndex, setImageIndex] = useState(0);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const topRef = useRef(null);
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
-  const handleViewerToggle = (cert) => {
+  const handleViewerToggle = (index) => {
     setImageViewerOpen(!imageViewerOpen);
-    setImageToView(cert);
+    if (index) {
+      setImageIndex(index);
+    } else {
+      setImageIndex(0);
+    }
   };
 
   const handleScroll = (ref = null) => {
@@ -52,11 +56,13 @@ function App() {
           topRef={topRef}
         />
 
-        <ImageViewer
-          imageViewerOpen={imageViewerOpen}
-          handleViewerToggle={handleViewerToggle}
-          imageToView={imageToView}
-        />
+        {imageViewerOpen && (
+          <ImageViewer
+            handleViewerToggle={handleViewerToggle}
+            imageIndex={imageIndex}
+            setImageIndex={setImageIndex}
+          />
+        )}
 
         <InfoMenu menuOpen={menuOpen} />
 

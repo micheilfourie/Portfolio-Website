@@ -1,29 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import globeSVG from "../assets/Globe_Negative.svg";
-import penSVG from "../assets/Pen_Negative.svg";
-import cameraSVG from "../assets/Camera_Negative.svg";
-
-const servicesList = [
-  {
-    title: "Static Website",
-    description:
-      "Responsive and modern websites built with React and Tailwind — perfect for portfolios, landing pages, or business sites.",
-    image: globeSVG,
-  },
-  {
-    title: "Photo Editing",
-    description:
-      "Professional photo editing including blemish removal, color correction, background cleanup, and overall enhancement for print or web use.",
-    image: cameraSVG,
-  },
-  {
-    title: "Vector Creation",
-    description:
-      "Transform raster images or sketches into crisp, scalable vector graphics ideal for logos, print materials, and digital designs.",
-    image: penSVG,
-  },
-];
+import { servicesList } from "../data.js";
 
 const Services = ({ handleScroll, contactRef }) => {
   return (

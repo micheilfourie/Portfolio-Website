@@ -1,22 +1,6 @@
 import { ProjectCard } from "../index.js";
-import TravelThumbnail from "../assets/Travel Website Thumbnail.webp";
-import FurnatureThumbnail from "../assets/Furnature E-Commerce Thumbnail.webp";
 import { forwardRef } from "react";
-
-const projectList = [
-  {
-    title: "E-Commerce Website",
-    thumbnail: FurnatureThumbnail,
-    link: "https://micheilfourie.github.io/Furniture-Shop-Website/",
-    gitLink: "https://github.com/micheilfourie/Furniture-Shop-Website",
-  },
-  {
-    title: "Travel Website",
-    thumbnail: TravelThumbnail,
-    link: "https://micheilfourie.github.io/Travel-Website/",
-    gitLink: "https://github.com/micheilfourie/Travel-Website",
-  },
-];
+import { projectList } from "../data.js";
 
 const Projects = forwardRef((props, ref) => {
   return (

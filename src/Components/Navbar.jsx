@@ -47,10 +47,12 @@ const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
           </div>
         </button>
       </nav>
-      <div
-        onClick={handleMenuToggle}
-        className={`bg-navy-900/90 fixed top-0 left-0 z-20 flex h-screen w-screen cursor-pointer min-lg:hidden ${!menuOpen && "pointer-events-none cursor-default opacity-0"} transitions-all duration-300 ease-in-out`}
-      ></div>
+      {menuOpen && (
+        <div
+          onClick={handleMenuToggle}
+          className={`bg-navy-900/80 fixed top-0 left-0 z-20 flex h-screen w-screen cursor-pointer`}
+        ></div>
+      )}
     </>
   );
 };
