@@ -47,7 +47,7 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
                 src={item?.certificate || ""}
                 loading="lazy"
                 alt="Certificate"
-                className="mx-auto max-h-[60vh] max-w-full object-contain brightness-90"
+                className="mx-auto max-h-[60dvh] max-w-full object-contain brightness-90"
               />
             </div>
           ))}
