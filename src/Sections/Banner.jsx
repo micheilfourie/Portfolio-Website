@@ -1,6 +1,24 @@
-import { bannerItems } from "../data.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
+const bannerItems = [
+  {
+    highlight: "10y+",
+    description: "Coding Experience",
+  },
+  {
+    highlight: "3y+",
+    description: "Design Experience",
+  },
+  {
+    highlight: "180+",
+    description: "Completed Projects",
+  },
+  {
+    highlight: <FontAwesomeIcon icon={faCircleCheck} />,
+    description: "Front-End Certified",
+  },
+];
 
 const Banner = () => {
   return (
@@ -8,11 +26,7 @@ const Banner = () => {
       {bannerItems.map((item, index) => (
         <div key={index} className="flex flex-col gap-2">
           <h6 className="text-accent text-center text-xl font-[800] tracking-wider">
-            {item.description === "Front-End Certified" ? (
-              <FontAwesomeIcon icon={faCircleCheck} />
-            ) : (
-              item.highlight
-            )}
+            {item.highlight}
           </h6>
           <p className="text-center text-[15px] text-gray-400 max-sm:text-sm">
             {item.description}

@@ -7,13 +7,10 @@ const TimelineCard = ({
   index = index,
   heading = "",
   description = "",
-  direction = "left",
   handleViewerToggle,
 }) => {
   return (
-    <div
-      className={`flex w-full translate-y-2 gap-8 ${direction === "left" ? "justify-start" : "justify-end"} relative`}
-    >
+    <div className={`relative flex w-full translate-y-2 justify-end gap-8`}>
       <span className="text-navy-500 absolute top-[-9px] right-[26px] z-10 text-3xl">
         &#9700;
       </span>

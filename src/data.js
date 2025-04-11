@@ -55,25 +55,6 @@ const servicesList = [
   },
 ];
 
-const bannerItems = [
-  {
-    highlight: "10y+",
-    description: "Coding Experience",
-  },
-  {
-    highlight: "3y+",
-    description: "Design Experience",
-  },
-  {
-    highlight: "180+",
-    description: "Completed Projects",
-  },
-  {
-    highlight: "",
-    description: "Front-End Certified",
-  },
-];
-
 const timelineList = [
   {
     heading: "Relational Database",
@@ -119,4 +100,4 @@ const timelineList = [
   },
 ];
 
-export { timelineList, bannerItems, servicesList, projectList, typeWriterList };
+export { timelineList, servicesList, projectList, typeWriterList };

@@ -11,9 +11,9 @@ import profileImage from "../assets/profile image.webp";
 const InfoMenu = ({ menuOpen }) => {
   return (
     <div
-      className={`bg-navy-700 top-[60px] z-30 grid h-screen w-[300px] flex-none grid-rows-[260px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100vh-60px)] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
+      className={`bg-navy-700 top-[60px] z-30 grid h-screen w-[300px] flex-none grid-rows-[250px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100vh-60px)] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
-      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tr from-[#23232D] to-[#252433] py-6 shadow-md">
+      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-tr from-[#23232D] to-[#252433] py-4 shadow-md">
         <div className="mb-6 hidden size-24 rounded-full bg-gray-400"></div>
         <div className="border-accent p2 mb-6 size-22 overflow-hidden rounded-full border-2">
           <img

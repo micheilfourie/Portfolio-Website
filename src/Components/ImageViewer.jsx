@@ -38,11 +38,11 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
 
       <div className="relative mt-[60px] flex max-h-screen w-full max-w-screen-xl flex-col items-center justify-center gap-6 overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}
         >
           {timelineList.map((item, index) => (
-            <div key={index} className="my-auto w-full flex-shrink-0">
+            <div key={index} className="flex w-full flex-shrink-0 items-end">
               <img
                 src={item?.certificate || ""}
                 loading="lazy"

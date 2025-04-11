@@ -1,6 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faAt } from "@fortawesome/free-solid-svg-icons";
 import { forwardRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const GetInTouch = forwardRef((props, ref) => {
   const [name, setName] = useState("");
@@ -9,7 +14,7 @@ const GetInTouch = forwardRef((props, ref) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    handleMessageSend();
     ClearAll();
   };
 
@@ -19,6 +24,28 @@ const GetInTouch = forwardRef((props, ref) => {
     setMessage("");
   };
 
+  const handleMessageSend = () => {
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          name: name,
+          email: email,
+          message: message,
+        },
+        publicKey,
+      )
+      .then(
+        () => {
+          alert("Message sent successfully");
+        },
+        (e) => {
+          console.error("❌ Email sending failed:", e);
+          alert("Failed to send message");
+        },
+      );
+  };
   return (
     <section ref={ref} className="flex flex-col gap-4">
       <h4 className="text-xl font-bold tracking-wider text-white uppercase">
@@ -61,6 +88,7 @@ const GetInTouch = forwardRef((props, ref) => {
           <div className="bg-navy-800 group-focus-within:text-navy-500 flex items-start justify-center p-4 transition-colors duration-500 ease-in-out group-focus-within:bg-white max-sm:hidden">
             <FontAwesomeIcon icon={faEnvelope} className="text-md pt-1" />
           </div>
+
           <textarea
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"
