@@ -66,7 +66,7 @@ function App() {
 
         <InfoMenu menuOpen={menuOpen} />
 
-        <div className="relative h-screen overflow-hidden">
+        <div className="relative h-[100dvh] overflow-hidden">
           <img
             src={image}
             alt="fixed background image"
