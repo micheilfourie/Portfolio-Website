@@ -19,7 +19,7 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
 
   return (
     <div
-      className={`bg-navy-900/95 fixed top-0 left-0 z-50 flex h-screen w-screen items-center justify-center`}
+      className={`bg-navy-900/95 fixed top-0 left-0 z-50 flex h-[100dvh] w-[100dvw] items-center justify-center`}
     >
       <nav className="fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr from-[#23232D] to-[#252433] px-6 shadow-md">
         <p className="text-[15px] tracking-wide text-gray-400">
@@ -36,7 +36,7 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
         </button>
       </nav>
 
-      <div className="relative mt-[60px] flex max-h-screen w-full max-w-screen-xl flex-col items-center justify-center gap-6 overflow-hidden">
+      <div className="relative mt-[60px] flex max-h-[100dvh] w-full max-w-screen-xl flex-col items-center justify-center gap-6 overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}

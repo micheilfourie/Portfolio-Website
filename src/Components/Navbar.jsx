@@ -50,7 +50,7 @@ const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
       {menuOpen && (
         <div
           onClick={handleMenuToggle}
-          className={`bg-navy-900/80 fixed top-0 left-0 z-20 flex h-screen w-screen cursor-pointer min-lg:hidden`}
+          className={`bg-navy-900/80 fixed top-0 left-0 z-20 flex h-[100dvh] w-[100dvw] cursor-pointer min-lg:hidden`}
         ></div>
       )}
     </>
