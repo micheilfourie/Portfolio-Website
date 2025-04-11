@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { TypewriterEffect, Banner } from "../index.js";
-import heroPhoto from "../assets/hero photo.webp";
+import heroPhoto from "../assets/hero-photo.webp";
 
 const Hero = ({ handleScroll, projectRef, contactRef }) => {
   return (

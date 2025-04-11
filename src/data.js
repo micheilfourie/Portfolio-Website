@@ -7,11 +7,11 @@ import {
   WebDesignCert,
 } from "./assets/Certificates/index.js";
 
-import globeSVG from "./assets/Globe_Negative.svg";
-import penSVG from "./assets/Pen_Negative.svg";
-import cameraSVG from "./assets/Camera_Negative.svg";
-import TravelThumbnail from "./assets/Travel Website Thumbnail.webp";
-import FurnatureThumbnail from "./assets/Furnature E-Commerce Thumbnail.webp";
+import globeSVG from "./assets/globe-negative.svg";
+import penSVG from "./assets/pen-negative.svg";
+import cameraSVG from "./assets/camera-negative.svg";
+import TravelThumbnail from "./assets/travel-website-thumbnail.webp";
+import FurnatureThumbnail from "./assets/furnature-e-commerce-thumbnail.webp";
 
 const typeWriterList = [
   "I Build Responsive Websites.",

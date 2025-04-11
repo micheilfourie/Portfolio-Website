@@ -1,13 +1,13 @@
-import ThreeDCert from "./3D Design.webp";
-import DataVisCert from "./Data Visualization.webp";
-import FrontEndCert from "./Front End Development.webp";
-import GraphicDesignCert from "./Graphic Design.webp";
-import JavaScriptCert from "./JavaScript Algorithms.webp";
-import PythonThreeCert from "./Python 3.webp";
-import PythonAdvancedCert from "./Python Advanced.webp";
-import PythonCert from "./Python.webp";
-import RelationalDBCert from "./Relational Database.webp";
-import WebDesignCert from "./Responsive Web Design.webp";
+import ThreeDCert from "./3d-design.webp";
+import DataVisCert from "./data-visualization.webp";
+import FrontEndCert from "./front-end-development.webp";
+import GraphicDesignCert from "./graphic-design.webp";
+import JavaScriptCert from "./javascript-algorithms.webp";
+import PythonThreeCert from "./python-3.webp";
+import PythonAdvancedCert from "./python-advanced.webp";
+import PythonCert from "./python.webp";
+import RelationalDBCert from "./relational-database.webp";
+import WebDesignCert from "./responsive-web-design.webp";
 
 export {
   ThreeDCert,

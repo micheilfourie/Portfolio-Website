@@ -1,4 +1,4 @@
-import Logo from "../assets/Logo_Offwhite.svg";
+import Logo from "../assets/logo-offwhite.svg";
 
 const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
   return (

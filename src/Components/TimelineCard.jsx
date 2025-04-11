@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faAward } from "@fortawesome/free-solid-svg-icons";
-import starSVG from "../assets/Star_Negative.svg";
+import starSVG from "../assets/star-negative.svg";
 
 const TimelineCard = ({
   index = index,
