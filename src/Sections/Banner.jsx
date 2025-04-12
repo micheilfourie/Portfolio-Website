@@ -28,7 +28,7 @@ const Banner = () => {
           <h6 className="text-accent text-center text-xl font-[800] tracking-wider">
             {item.highlight}
           </h6>
-          <p className="text-center text-[15px] text-gray-400 max-sm:text-sm">
+          <p className="text-center text-[15px] text-white max-sm:text-sm">
             {item.description}
           </p>
         </div>

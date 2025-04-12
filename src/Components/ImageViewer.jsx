@@ -64,7 +64,7 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
             <div
               onClick={() => setImageIndex(index)}
               key={index}
-              className={`size-3 rounded-full hover:cursor-pointer ${imageIndex === index ? "bg-accent scale-130" : "bg-gray-500"} transitions-all duration-300 ease-in-out`}
+              className={`size-3 rounded-full hover:cursor-pointer ${imageIndex === index ? "bg-accent scale-130" : "bg-gray-400"} transitions-all duration-300 ease-in-out`}
             ></div>
           ))}
           <button

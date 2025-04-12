@@ -58,7 +58,7 @@ const CircleProgressBar = ({
         </svg>
 
         <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
-          <motion.span className="font-poppins text-xs text-gray-500">
+          <motion.span className="font-poppins text-xs text-gray-400">
             {displayProgress}%
           </motion.span>
         </div>

@@ -41,7 +41,7 @@ const GetInTouch = forwardRef((props, ref) => {
           alert("Message sent successfully");
         },
         (e) => {
-          console.error("❌ Email sending failed:", e);
+          console.error("Message sending failed:", e);
           alert("Failed to send message");
         },
       );
@@ -66,7 +66,7 @@ const GetInTouch = forwardRef((props, ref) => {
             placeholder="Name"
             value={name}
             required
-            className="bg-navy-700 w-full p-4 text-[14px] outline-0"
+            className="bg-navy-700 w-full p-4 outline-0"
           />
         </div>
 
@@ -80,7 +80,7 @@ const GetInTouch = forwardRef((props, ref) => {
             placeholder="Email"
             value={email}
             required
-            className="bg-navy-700 w-full p-4 text-[14px] outline-0"
+            className="bg-navy-700 w-full p-4 outline-0"
           />
         </div>
 
@@ -94,7 +94,7 @@ const GetInTouch = forwardRef((props, ref) => {
             placeholder="Message"
             value={message}
             required
-            className="bg-navy-700 scrollbar-hidden h-[200px] w-full resize-none p-4 text-[14px] outline-0"
+            className="bg-navy-700 scrollbar-hidden h-[200px] w-full resize-none p-4 outline-0"
           />
         </div>
 

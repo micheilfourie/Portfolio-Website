@@ -1,9 +1,9 @@
-import Logo from "../assets/logo-offwhite.svg";
+import Logo from "../assets/logo-negative.svg";
 
 const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
   return (
     <>
-      <nav className="fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr from-[#23232D] to-[#252433] px-6 shadow-md min-lg:hidden">
+      <nav className="from-navy-600 to-navy-500 fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr px-6 shadow-md min-lg:hidden">
         <button onClick={() => handleScroll()} className="cursor-pointer">
           <img src={Logo} alt="Logo" loading="lazy" className="h-[35px]" />
         </button>
@@ -17,7 +17,7 @@ const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
                 }`}
               ></div>
               <div
-                className={`h-[3px] w-7 transform rounded bg-white transition-all duration-300 ${
+                className={`h-[3px] w-7 transform bg-white transition-all duration-300 ${
                   menuOpen ? "translate-x-10" : ""
                 } delay-75`}
               ></div>

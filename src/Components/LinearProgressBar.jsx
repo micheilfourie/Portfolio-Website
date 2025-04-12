@@ -19,7 +19,7 @@ const LinearProgressBar = ({ progress = 50, title = "", delay = 0 }) => {
     <div>
       <label className="mb-2 flex items-center justify-between">
         <p className="text-sm text-white">{title}</p>
-        <motion.span className="font-poppins text-xs text-gray-500">
+        <motion.span className="font-poppins text-xs text-gray-400">
           {displayProgress}%
         </motion.span>
       </label>
