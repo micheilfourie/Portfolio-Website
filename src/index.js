@@ -13,6 +13,7 @@ import GetInTouch from "./Sections/GetInTouch.jsx";
 import Services from "./Sections/Services.jsx";
 import Footer from "./Sections/Footer.jsx";
 import ImageViewer from "./Components/ImageViewer.jsx";
+import ScrollIndicator from "./Components/ScrollIndicator.jsx";
 
 export {
   InfoMenu,
@@ -30,4 +31,5 @@ export {
   Services,
   Footer,
   ImageViewer,
+  ScrollIndicator,
 };

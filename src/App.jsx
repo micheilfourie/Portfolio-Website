@@ -8,6 +8,7 @@ import {
   // Services,
   Footer,
   ImageViewer,
+  ScrollIndicator,
 } from "./index.js";
 import { useState, useRef } from "react";
 
@@ -20,6 +21,7 @@ function App() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const topRef = useRef(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
@@ -75,9 +77,11 @@ function App() {
           />
 
           <div
+            onScroll={() => setShowScrollIndicator(false)}
             ref={topRef}
             className="scrollbar-hidden relative flex h-full flex-col gap-14 overflow-y-scroll p-8 pb-0 max-lg:p-4"
           >
+            <ScrollIndicator showScrollIndicator={showScrollIndicator} />
             <Hero
               handleScroll={handleScroll}
               projectRef={projectRef}
