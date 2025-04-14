@@ -40,12 +40,12 @@ const Hero = ({ handleScroll, projectRef, contactRef }) => {
               onClick={() => handleScroll(contactRef)}
               className="group z-10 flex cursor-pointer items-center p-4 text-white"
             >
-              <p className="group inline-block pr-2 text-[13px] font-semibold tracking-wider uppercase">
+              <p className="inline-block pr-2 text-[13px] font-semibold tracking-wider uppercase">
                 Hire me{" "}
               </p>
               <FontAwesomeIcon
                 icon={faChevronRight}
-                className="group text-xs transition-all duration-300 ease-in-out group-hover:translate-x-1"
+                className="text-xs transition-all duration-300 ease-in-out group-hover:translate-x-1"
               />
             </button>
           </div>

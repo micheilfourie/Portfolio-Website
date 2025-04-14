@@ -7,7 +7,7 @@ const Projects = forwardRef((props, ref) => {
     <section ref={ref} className="flex w-full flex-col gap-4">
       <div className="flex w-full flex-col gap-4">
         <h4 className="text-xl font-bold tracking-wider text-white uppercase">
-          Websites
+          Projects
         </h4>
         <div className="grid w-full grid-cols-2 gap-4 max-md:grid-cols-1">
           {projectList.map((item, index) => (

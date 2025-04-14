@@ -11,11 +11,10 @@ import profileImage from "../assets/profile-image.webp";
 const InfoMenu = ({ menuOpen }) => {
   return (
     <div
-      className={`bg-navy-700 top-[60px] z-30 grid h-[100dvh] w-[300px] flex-none grid-rows-[250px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100dvh-60px)] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
+      className={`bg-navy-700 top-[59px] z-30 grid h-[100dvh] w-[300px] flex-none grid-rows-[240px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100dvh-60px)] max-lg:grid-rows-[140px_auto_60px] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
-      <div className="from-navy-600 to-navy-500 flex w-full flex-col items-center justify-center bg-gradient-to-tr py-4 shadow-md">
-        <div className="mb-6 hidden size-24 rounded-full bg-gray-400"></div>
-        <div className="border-accent p2 mb-6 size-22 overflow-hidden rounded-full border-2">
+      <div className="from-navy-600 to-navy-500 flex w-full flex-col items-center justify-center gap-4 bg-gradient-to-tr p-4 shadow-md max-lg:flex-row">
+        <div className="border-accent size-22 overflow-hidden rounded-full border-2">
           <img
             src={profileImage}
             alt="profile image"
@@ -23,12 +22,13 @@ const InfoMenu = ({ menuOpen }) => {
             className="object-contain object-center"
           />
         </div>
-
-        <h3 className="text-md mb-2 font-semibold text-white">
-          Micheil Fourie
-        </h3>
-        <p className="text-sm text-gray-400">Front-End Developer</p>
-        <p className="text-sm text-gray-400">Creative Designer</p>
+        <div className="text-center max-lg:text-left">
+          <h3 className="text-md mb-2 font-semibold text-white">
+            Micheil Fourie
+          </h3>
+          <p className="text-sm text-gray-400">Front-End Developer</p>
+          <p className="text-sm text-gray-400">Creative Designer</p>
+        </div>
       </div>
 
       <div className="scrollbar-hidden divide-navy-500 flex flex-col gap-4 divide-y overflow-y-scroll p-6 text-sm">
@@ -71,7 +71,7 @@ const InfoMenu = ({ menuOpen }) => {
         </ul>
       </div>
 
-      <div className="from-navy-500 to-navy-600 flex items-center justify-center bg-gradient-to-tr shadow-md">
+      <div className="from-navy-600 to-navy-500 flex items-center justify-center bg-gradient-to-tr shadow-md">
         <a href="https://www.linkedin.com/in/micheil-fourie/">
           <FontAwesomeIcon
             icon={faLinkedin}
