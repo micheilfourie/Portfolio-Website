@@ -5,7 +5,7 @@ import {
   Education,
   Projects,
   GetInTouch,
-  Services,
+  // Services,
   Footer,
   ImageViewer,
 } from "./index.js";
@@ -83,9 +83,9 @@ function App() {
               projectRef={projectRef}
               contactRef={contactRef}
             />
-            <Services handleScroll={handleScroll} contactRef={contactRef} />
-            <Projects ref={projectRef} />
+            {/* <Services handleScroll={handleScroll} contactRef={contactRef} /> */}
             <Education handleViewerToggle={handleViewerToggle} />
+            <Projects ref={projectRef} />
             <GetInTouch ref={contactRef} />
             <Footer />
           </div>
