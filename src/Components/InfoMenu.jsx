@@ -13,7 +13,7 @@ const InfoMenu = ({ menuOpen }) => {
     <div
       className={`bg-navy-700 top-[59px] z-30 grid h-[100dvh] w-[300px] flex-none grid-rows-[240px_auto_60px] shadow-md max-lg:fixed max-lg:h-[calc(100dvh-60px)] max-lg:grid-rows-[140px_auto_60px] ${menuOpen ? "right-0" : "right-[-300px]"} max-lg:transition-all max-lg:duration-500 max-lg:ease-in-out`}
     >
-      <div className="from-navy-600 to-navy-500 flex w-full flex-col items-center justify-center gap-4 bg-gradient-to-tr p-4 shadow-md max-lg:flex-row">
+      <div className="from-navy-600 to-navy-500 flex w-full flex-col items-center justify-center gap-5 bg-gradient-to-tr p-4 shadow-md max-lg:flex-row">
         <div className="border-accent size-22 overflow-hidden rounded-full border-2">
           <img
             src={profileImage}
