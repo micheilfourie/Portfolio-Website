@@ -83,7 +83,7 @@ const ImageViewer = ({
         className="relative mt-[60px] flex max-h-[100dvh] w-full max-w-screen-xl flex-col items-center justify-center gap-3 overflow-hidden"
       >
         <div
-          className="flex transition-transform duration-700 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}
         >
           {timelineList.map((item, index) => (

@@ -10,7 +10,7 @@ const TypewriterEffect = () => {
 
   useEffect(() => {
     const currentText = typeWriterList[listIndex];
-    let typingSpeed = isDeleting ? 30 : 80;
+    let typingSpeed = isDeleting ? 30 : 110;
     let interval;
 
     if (!isDeleting && charIndex < currentText.length) {
