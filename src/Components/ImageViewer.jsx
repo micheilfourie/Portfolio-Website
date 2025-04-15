@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { timelineList } from "../data.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,16 +7,52 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const sliderRef = useRef(null);
+
   const handlePrev = () => {
-    imageIndex !== 0
-      ? setImageIndex(imageIndex - 1)
-      : setImageIndex(timelineList.length - 1);
+    imageIndex !== 0 && setImageIndex(imageIndex - 1);
   };
+
   const handleNext = () => {
-    imageIndex !== timelineList.length - 1
-      ? setImageIndex(imageIndex + 1)
-      : setImageIndex(0);
+    imageIndex !== timelineList.length - 1 && setImageIndex(imageIndex + 1);
   };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) > minSwipeDistance) {
+      if (distance > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.addEventListener("touchstart", handleTouchStart, { passive: true });
+    slider.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      slider.removeEventListener("touchstart", handleTouchStart);
+      slider.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [imageIndex]);
 
   return (
     <div
@@ -36,7 +73,10 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
         </button>
       </nav>
 
-      <div className="relative mt-[60px] flex max-h-[100dvh] w-full max-w-screen-xl flex-col items-center justify-center gap-6 overflow-hidden">
+      <div
+        ref={sliderRef}
+        className="relative mt-[60px] flex max-h-[100dvh] w-full max-w-screen-xl flex-col items-center justify-center gap-3 overflow-hidden"
+      >
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}
@@ -53,8 +93,8 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-2">
-          <button onClick={handlePrev} className="cursor-pointer">
+        <div className="flex items-center justify-center gap-2 py-1">
+          <button onClick={handlePrev} className="cursor-pointer max-sm:hidden">
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="mr-6 text-2xl text-gray-400 transition-all duration-300 ease-in-out hover:scale-120"
@@ -64,12 +104,12 @@ const ImageViewer = ({ handleViewerToggle, imageIndex = 0, setImageIndex }) => {
             <div
               onClick={() => setImageIndex(index)}
               key={index}
-              className={`size-3 rounded-full hover:cursor-pointer ${imageIndex === index ? "bg-accent scale-130" : "bg-gray-400"} transitions-all duration-300 ease-in-out`}
+              className={`size-3 rounded-full hover:cursor-pointer max-sm:size-2 ${imageIndex === index ? "bg-accent scale-130" : "bg-gray-400"} transitions-all duration-300 ease-in-out`}
             ></div>
           ))}
           <button
             onClick={handleNext}
-            className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-120"
+            className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-120 max-sm:hidden"
           >
             <FontAwesomeIcon
               icon={faChevronRight}
