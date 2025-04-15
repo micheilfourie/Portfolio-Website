@@ -112,7 +112,7 @@ const GetInTouch = forwardRef((props, ref) => {
           >
             Send Message
           </button>
-          <div className="mt-2 flex flex-col justify-between gap-1 text-[13px] text-gray-400">
+          <div className="mt-2 flex flex-col justify-between gap-1 text-sm text-gray-400">
             <p>
               <FontAwesomeIcon icon={faPhone} className="mr-3" />
               072 397 3298
