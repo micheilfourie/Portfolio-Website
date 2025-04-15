@@ -5,11 +5,15 @@ const Navbar = ({ menuOpen, handleMenuToggle, handleScroll }) => {
   return (
     <>
       <nav className="from-navy-600 to-navy-500 fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr px-4 shadow-md min-lg:hidden">
-        <button onClick={handleScroll} className="ml-1 cursor-pointer">
+        <button
+          disabled={menuOpen ? true : false}
+          onClick={handleScroll}
+          className="ml-1 cursor-pointer"
+        >
           <img
             src={Logo}
             alt="logo"
-            className="h-9 object-contain object-left"
+            className="h-[34px] object-contain object-left"
           />
         </button>
         <button onClick={handleMenuToggle} className="relative cursor-pointer">

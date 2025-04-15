@@ -3,7 +3,7 @@ import { timelineList } from "../data.js";
 
 const Education = ({ handleViewerToggle }) => {
   return (
-    <section className="flex w-full flex-col gap-4">
+    <section className="flex w-full flex-col gap-4 px-8 max-md:px-4">
       <h4 className="text-xl font-bold tracking-wider text-white uppercase">
         Education
       </h4>

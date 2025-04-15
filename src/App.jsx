@@ -58,13 +58,12 @@ function App() {
           topRef={topRef}
         />
 
-        {imageViewerOpen && (
-          <ImageViewer
-            handleViewerToggle={handleViewerToggle}
-            imageIndex={imageIndex}
-            setImageIndex={setImageIndex}
-          />
-        )}
+        <ImageViewer
+          handleViewerToggle={handleViewerToggle}
+          imageIndex={imageIndex}
+          setImageIndex={setImageIndex}
+          imageViewerOpen={imageViewerOpen}
+        />
 
         <InfoMenu menuOpen={menuOpen} />
 
@@ -79,7 +78,7 @@ function App() {
           <div
             onScroll={() => setShowScrollIndicator(false)}
             ref={topRef}
-            className="scrollbar-hidden relative flex h-full flex-col gap-14 overflow-y-scroll p-8 pb-0 max-lg:p-4"
+            className="scrollbar-hidden relative flex h-full flex-col gap-12 overflow-y-scroll pb-0"
           >
             <ScrollIndicator showScrollIndicator={showScrollIndicator} />
             <Hero

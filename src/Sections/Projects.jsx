@@ -4,7 +4,7 @@ import { projectList } from "../data.js";
 
 const Projects = forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="flex w-full flex-col gap-4">
+    <section ref={ref} className="flex w-full flex-col gap-4 px-8 max-md:px-4">
       <div className="flex w-full flex-col gap-4">
         <h4 className="text-xl font-bold tracking-wider text-white uppercase">
           Projects

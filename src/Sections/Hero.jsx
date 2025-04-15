@@ -5,7 +5,7 @@ import heroPhoto from "../assets/hero-photo.webp";
 
 const Hero = ({ handleScroll, projectRef, contactRef }) => {
   return (
-    <header className="min-md:py-4">
+    <header className="px-8 pt-8 max-md:px-4 max-md:pt-4">
       <div className="to-navy-500 from-navy-600 relative flex w-full flex-col justify-center gap-6 bg-gradient-to-tr p-8 shadow-md max-lg:mt-[60px] max-sm:p-5 min-md:from-white/5 min-md:to-[#ffffff]/10">
         <img
           src={heroPhoto}
@@ -17,7 +17,7 @@ const Hero = ({ handleScroll, projectRef, contactRef }) => {
         <div className="absolute top-0 left-0 h-full w-full backdrop-blur-xs"></div>
 
         <div className="z-10 flex w-full flex-col gap-4 max-md:w-full">
-          <h1 className="z-10 text-4xl font-[800] tracking-wide text-white uppercase max-[500px]:text-[25px] md:w-[70%]">
+          <h1 className="z-10 text-4xl font-[800] tracking-wide text-white uppercase max-[500px]:text-[27px] md:w-[70%]">
             Explore My Digital Creative Space!
           </h1>
 
