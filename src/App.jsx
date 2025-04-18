@@ -38,7 +38,7 @@ function App() {
     if (ref && ref.current) {
       ref.current.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
       });
     } else if (topRef.current) {
       topRef.current.scrollTo({
