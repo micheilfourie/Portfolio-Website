@@ -59,7 +59,15 @@ const InfoMenu = ({ menuOpen }) => {
         </div>
 
         <ul className="font-montserrat mt-4 flex flex-col gap-2">
-          {["Git", "Sass", "Jquery", "Bootstrap"].map((item, index) => (
+          {[
+            "Git",
+            "Sass",
+            "Jquery",
+            "Bootstrap",
+            "Wordpress",
+            "Python",
+            "Java",
+          ].map((item, index) => (
             <li key={index} className="font-poppins text-white">
               <FontAwesomeIcon
                 icon={faCheck}

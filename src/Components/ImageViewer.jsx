@@ -6,6 +6,8 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+const filteredTimelineList = timelineList.filter((item) => item?.certificate);
+
 const ImageViewer = ({
   handleViewerToggle,
   imageIndex = 0,
@@ -21,7 +23,8 @@ const ImageViewer = ({
   };
 
   const handleNext = () => {
-    imageIndex !== timelineList.length - 1 && setImageIndex(imageIndex + 1);
+    imageIndex !== filteredTimelineList.length - 1 &&
+      setImageIndex(imageIndex + 1);
   };
 
   const handleTouchStart = (e) => {
@@ -50,12 +53,22 @@ const ImageViewer = ({
     const slider = sliderRef.current;
     if (!slider) return;
 
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        handlePrev();
+      }
+    };
+
     slider.addEventListener("touchstart", handleTouchStart, { passive: true });
     slider.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       slider.removeEventListener("touchstart", handleTouchStart);
       slider.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [imageIndex]);
 
@@ -65,7 +78,7 @@ const ImageViewer = ({
     >
       <nav className="fixed top-0 left-1/2 z-50 flex h-[60px] w-full max-w-screen-xl -translate-x-1/2 items-center justify-between bg-gradient-to-tr from-[#23232D] to-[#252433] px-6 shadow-md">
         <p className="text-[15px] tracking-wide text-gray-400">
-          Certificate {imageIndex + 1} of {timelineList.length}
+          Certificate {imageIndex + 1} of {filteredTimelineList.length}
         </p>
         <button
           onClick={() => handleViewerToggle(imageIndex)}
@@ -86,7 +99,7 @@ const ImageViewer = ({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}
         >
-          {timelineList.map((item, index) => (
+          {filteredTimelineList.map((item, index) => (
             <div key={index} className="flex w-full flex-shrink-0 items-end">
               <img
                 src={item?.certificate || ""}
@@ -98,14 +111,14 @@ const ImageViewer = ({
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-2 py-1">
+        <div className="flex items-center justify-center gap-2 py-1 outline-0">
           <button onClick={handlePrev} className="cursor-pointer max-sm:hidden">
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="mr-6 text-2xl text-gray-400 transition-all duration-300 ease-in-out hover:scale-120"
             />
           </button>
-          {timelineList.map((item, index) => (
+          {filteredTimelineList.map((item, index) => (
             <div
               onClick={() => setImageIndex(index)}
               key={index}

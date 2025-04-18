@@ -105,7 +105,7 @@ const GetInTouch = forwardRef((props, ref) => {
           />
         </div>
 
-        <div className="mt-2 flex items-end justify-start gap-9 pb-2 max-[440px]:flex-col max-[440px]:items-start max-[440px]:gap-5">
+        <div className="mt-2 flex items-end justify-start gap-9 pb-2 max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-5">
           <button
             type="submit"
             className="bg-accent text-navy-500 font-montserrat mt-2 h-[50px] w-[170px] cursor-pointer text-[13px] font-semibold uppercase transition-all duration-300 ease-in-out hover:-translate-y-[5px]"

@@ -37,7 +37,7 @@ const TypewriterEffect = () => {
 
   return (
     <div className="font-poppins text-md z-10 flex items-start text-white max-sm:flex-col max-sm:gap-1">
-      <span className="text-accent">{`<code>`}</span>
+      <span className="text-accent">{`<span>`}</span>
       <span className="px-2 max-sm:pl-4">
         <motion.span
           className="whitespace-pre"
@@ -50,7 +50,7 @@ const TypewriterEffect = () => {
           <span className="animate-pulse">|</span>
         </motion.span>
       </span>
-      <span className="text-accent">{`</code>`}</span>
+      <span className="text-accent">{`</span>`}</span>
     </div>
   );
 };

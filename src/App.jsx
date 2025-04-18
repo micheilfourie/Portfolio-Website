@@ -78,9 +78,12 @@ function App() {
           <div
             onScroll={() => setShowScrollIndicator(false)}
             ref={topRef}
-            className="scrollbar-hidden relative flex h-full flex-col gap-12 overflow-y-scroll pb-0"
+            className="scrollbar-hidden relative flex h-full flex-col gap-14 overflow-y-scroll pb-0"
           >
-            <ScrollIndicator showScrollIndicator={showScrollIndicator} />
+            <ScrollIndicator
+              showScrollIndicator={showScrollIndicator}
+              imageViewerOpen={imageViewerOpen}
+            />
             <Hero
               handleScroll={handleScroll}
               projectRef={projectRef}

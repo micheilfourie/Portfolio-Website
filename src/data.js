@@ -5,6 +5,10 @@ import {
   JavaScriptCert,
   RelationalDBCert,
   WebDesignCert,
+  ThreeDCert,
+  PythonThreeCert,
+  PythonAdvancedCert,
+  PythonCert,
 } from "./assets/Certificates/index.js";
 
 import globeSVG from "./assets/globe-negative.svg";
@@ -92,11 +96,46 @@ const timelineList = [
     certificate: WebDesignCert,
   },
   {
+    heading: "Python",
+    description:
+      "I built a solid understanding of Python fundamentals, syntax, and its applications in backend development and scripting.",
+    link: "",
+    certificate: PythonCert,
+  },
+  {
+    heading: "Python 3",
+    description:
+      "I expanded on core Python knowledge with deeper insights into language features, object-oriented programming, and modern development practices.",
+    link: "",
+    certificate: PythonThreeCert,
+  },
+  {
+    heading: "Python Advanced",
+    description:
+      "I tackled more complex Python topics, such as decorators, generators, and advanced data handling, strengthening my backend proficiency.",
+    link: "",
+    certificate: PythonAdvancedCert,
+  },
+  {
+    heading: "3D Design",
+    description:
+      "I explored 3D modeling and design, gaining hands-on experience with tools and techniques to bring digital concepts to life.",
+    link: "",
+    certificate: ThreeDCert,
+  },
+  {
     heading: "Graphic Design",
     description:
       "I honed my skills in Photoshop, Illustrator, and InDesign, to create impactful visuals for clients.",
     link: "",
     certificate: GraphicDesignCert,
+  },
+  {
+    heading: "Java - Oracle Bursary",
+    description:
+      "I gained a solid foundation in Java and object-oriented programming through an Oracle-sponsored course but was unable to attend the final exam due to personal reasons.",
+    link: "",
+    certificate: "",
   },
 ];
 
