@@ -5,7 +5,7 @@ import GraphicDesignCert from "./graphic-design.webp";
 import JavaScriptCert from "./javascript-algorithms.webp";
 import PythonThreeCert from "./python-3.webp";
 import PythonAdvancedCert from "./python-advanced.webp";
-import PythonCert from "./python.webp";
+import PythonCert from "./python-cert.webp";
 import RelationalDBCert from "./relational-database.webp";
 import WebDesignCert from "./responsive-web-design.webp";
 
