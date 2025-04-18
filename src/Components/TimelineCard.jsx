@@ -40,7 +40,7 @@ const TimelineCard = ({
         <div
           className={`to-navy-600 from-navy-700 flex flex-col gap-2 bg-gradient-to-tr p-6 ${activeIndex !== index && "max-md:h-0 max-md:py-0 max-md:opacity-0"} transition-all duration-300 ease-out`}
         >
-          <p className="line-clamp-4 max-w-[600px] text-[14px] tracking-wide text-gray-400">
+          <p className="text-[14px] tracking-wide text-gray-400 min-md:max-w-[80%]">
             {description}
           </p>
           {certificate ? (
