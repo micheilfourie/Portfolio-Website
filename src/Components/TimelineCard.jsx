@@ -24,7 +24,7 @@ const TimelineCard = ({
       <div className={`relative flex w-full flex-col overflow-hidden`}>
         <div
           onClick={() => handleCardClick(index)}
-          className="to-navy-500 from-navy-600 z-10 flex items-center justify-between bg-gradient-to-tr p-6 shadow-md max-md:cursor-pointer"
+          className="to-navy-500 from-navy-600 z-10 flex items-center justify-between bg-gradient-to-tr p-6 shadow-md max-md:cursor-pointer max-md:gap-10"
         >
           <h5 className="text-sm font-semibold tracking-wide text-white uppercase">
             {heading}
