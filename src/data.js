@@ -96,11 +96,11 @@ const timelineList = [
     certificate: WebDesignCert,
   },
   {
-    heading: "Python",
+    heading: "Python Advanced",
     description:
-      "I built a solid understanding of Python fundamentals, syntax, and its applications in backend development and scripting.",
+      "I tackled more complex Python topics, such as decorators, generators, and advanced data handling, strengthening my backend proficiency.",
     link: "",
-    certificate: PythonCert,
+    certificate: PythonAdvancedCert,
   },
   {
     heading: "Python 3",
@@ -110,11 +110,11 @@ const timelineList = [
     certificate: PythonThreeCert,
   },
   {
-    heading: "Python Advanced",
+    heading: "Python",
     description:
-      "I tackled more complex Python topics, such as decorators, generators, and advanced data handling, strengthening my backend proficiency.",
+      "I built a solid understanding of Python fundamentals, syntax, and its applications in backend development and scripting.",
     link: "",
-    certificate: PythonAdvancedCert,
+    certificate: PythonCert,
   },
   {
     heading: "3D Design",
